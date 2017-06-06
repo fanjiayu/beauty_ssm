@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yingjun.ssm.dao.UserDao">
+<mapper namespace="com.ysgj.ssm.dao.UserDao">
 
 	<select id="queryByPhone" resultType="User">
 		SELECT *
 		FROM _user
-		WHERE 
+		WHERE
 		user_phone= #{userPhone} limit 1
 	</select>
-	
+
 	<select id="queryAll" resultType="User">
 		SELECT *
 		FROM _user
@@ -18,8 +18,8 @@
 
 
    	<update id="addScore">
-		UPDATE _user 
-		SET 
+		UPDATE _user
+		SET
 		score = score + #{add}
 	</update>
 

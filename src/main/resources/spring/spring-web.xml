@@ -8,12 +8,12 @@
 		http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd
-		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 
     <!-- 激活组件扫描功能,扫描aop的相关组件组件 -->
-    <context:component-scan base-package="com.yingjun.ssm.aop"/>
+    <context:component-scan base-package="com.ysgj.ssm.aop"/>
     <!-- 启动对@AspectJ注解的支持 -->
     <aop:aspectj-autoproxy proxy-target-class="true" />
 
@@ -37,9 +37,9 @@
     </bean>
 
     <!--扫描web相关的controller-->
-    <context:component-scan base-package="com.yingjun.ssm.web"/>
+    <context:component-scan base-package="com.ysgj.ssm.web"/>
 
 	<!--全局异常捕捉 -->
-	<bean class="com.yingjun.ssm.exception.GlobalExceptionResolver" />
+	<bean class="com.ysgj.ssm.exception.GlobalExceptionResolver" />
 
 </beans>

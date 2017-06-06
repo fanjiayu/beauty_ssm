@@ -4,10 +4,10 @@ DELIMITER $$ -- 结束标志;转换为 $$
 -- 参数：in 输入参数; out 输出参数
 -- row_count():返回上一条修改类型sql(delete,insert,upodate)的影响行数
 -- row_count: 0:未修改数据; >0:表示修改的行数; <0:sql错误/未执行修改sql
-CREATE PROCEDURE `beauty_ssm`.`execute_buy`
-(IN  v_user_id BIGINT, 
+CREATE PROCEDURE `ysgj_ssm`.`execute_buy`
+(IN  v_user_id BIGINT,
  IN  v_goods_id BIGINT,
- IN  v_title VARCHAR(120), 
+ IN  v_title VARCHAR(120),
  OUT r_result INT)
 	BEGIN
 		DECLARE insert_count INT DEFAULT 0;
@@ -23,7 +23,7 @@ CREATE PROCEDURE `beauty_ssm`.`execute_buy`
 			SET r_result = -2;
 		ELSE
 			UPDATE _goods SET number = number - 1
-			WHERE goods_id = v_goods_id 
+			WHERE goods_id = v_goods_id
 			AND number > 0;
 			SELECT ROW_COUNT() INTO insert_count;
 			IF (insert_count = 0) THEN
@@ -31,7 +31,7 @@ CREATE PROCEDURE `beauty_ssm`.`execute_buy`
 				SET r_result = 0;
 			ELSEIF (insert_count < 0) THEN
 				ROLLBACK;
-				SET r_result = -2; 
+				SET r_result = -2;
 			ELSE
 				COMMIT;
 			SET r_result = 1;
