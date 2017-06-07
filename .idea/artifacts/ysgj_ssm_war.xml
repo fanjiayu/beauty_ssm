@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="ysgj_ssm:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="ysgj_ssm_0.0.1-SNAPSHOT_20170606.war">
-      <element id="artifact" artifact-name="ysgj_ssm:war exploded" />
-    </root>
-  </artifact>
-</component>
