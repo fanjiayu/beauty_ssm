@@ -1,12 +1,8 @@
 /target/
 /catalina.base_IS_UNDEFINED/
 /.settings/
-.idea/compiler.xml
-.idea/copyright/
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/workspace.xml
+.idea/
 src/main/main.iml
 src/test/test.iml
 /ysgj_ssm.iml
+
