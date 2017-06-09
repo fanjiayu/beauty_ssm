@@ -1,8 +1,7 @@
 /target/
 /catalina.base_IS_UNDEFINED/
 /.settings/
-.idea/
+/.idea/
 src/main/main.iml
 src/test/test.iml
 /ysgj_ssm.iml
-
